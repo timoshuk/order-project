@@ -16,15 +16,22 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/ckeditor": "^1.0",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
-        "drush/drush": "^12.5"
+        "drupal/devel": "^5.2",
+        "drupal/gin": "^3.0@RC",
+        "drupal/upgrade_status": "^4.3",
+        "drush/drush": "^12.5",
+        "vlucas/phpdotenv": "^5.6",
+        "webflo/drupal-finder": "^1.3"
     },
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
@@ -33,7 +40,9 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "cweagans/composer-patches": true,
+            "zaporylie/composer-drupal-optimizations": true
         },
         "sort-packages": true
     },
@@ -93,5 +102,13 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "^10.2",
+        "mglaman/phpstan-drupal": "^1.2",
+        "phpstan/extension-installer": "^1.3",
+        "phpstan/phpstan": "^1.11",
+        "phpstan/phpstan-deprecation-rules": "^1.2",
+        "zaporylie/composer-drupal-optimizations": "^1.2"
     }
 }
